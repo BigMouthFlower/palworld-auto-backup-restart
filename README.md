@@ -1,6 +1,7 @@
 # Windows幻兽帕鲁服务器自动备份和重启脚本
 适用于Windows系统开设的幻兽帕鲁服务器，进行存档自动备份和服务端重启。
 下载脚本后，你需要根据你自己的情况修改如下内容：
+
 1.将`palworld_path`改为你服务器上幻兽帕鲁文件的根目录，一般来说`Steam\steamapps\common\PalServer`这一部分不会有变化，主要是修改前面的部分。
 ```
 set "palworld_path=C:\Program Files (x86)\Steam\steamapps\common\PalServer"
