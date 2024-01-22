@@ -1,4 +1,6 @@
 # Windows幻兽帕鲁服务器自动备份和重启脚本
+English version:
+- [English](README_EN.md)
 ## 介绍
 适用于Windows系统开设的幻兽帕鲁服务器，进行存档自动备份和服务端重启。
 下载脚本后，你需要根据你自己的情况修改如下内容：
