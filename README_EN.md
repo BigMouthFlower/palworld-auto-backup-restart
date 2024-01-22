@@ -1,21 +1,22 @@
-# Windows幻兽帕鲁服务器自动备份和重启脚本
+# Palworld automatically backup and restart on Windows
 中文版：
 - [中文](README.md)
-## 介绍
-适用于Windows系统开设的幻兽帕鲁服务器，进行存档自动备份和服务端重启。
-下载脚本后，你需要根据你自己的情况修改如下内容：
+## Introduction
+For those who run Palworld server on Windows. To automatically backup the save and restart the server.
+When you download this script, you will need to modify the following content according to your own situation:
 
-1.将`palworld_path`改为你服务器上幻兽帕鲁文件的根目录，一般来说`Steam\steamapps\common\PalServer`这一部分不会有变化，主要是修改前面的部分。
+1.Change `palworld_path` to the root directory of the Palworld files on your server. Generally, the `Steam\steamapps\common\PalServer` part is fixed, you need to modify the part before it.
 ```
 set "palworld_path=C:\Program Files (x86)\Steam\steamapps\common\PalServer"
 ```
-2.将`backup_path`修改为你的存档备份目录，这个取决于你，选择一个有足够空间的磁盘创建目录
+2.Change `backup_path` to your save backup directory. This depends on you, choose a directory on a disk with enough space.
 ```
 set "backup_path=C:\Users\Administrator\Desktop\backup"
 ```
-3.将`interval`设为你希望的服务器备份和重启间隔，单位是秒，一小时是3600秒，取决于你服务器的性能和成员需求。
+3.Change `interval` to the interval you want for server backups and restarts, measured in seconds. One hour is 3600 seconds, depending on the performance of your server and the needs of the members.
 ```
 set interval=10800
 ```
-使用脚本后就不用手动启动游戏服务端了，只需要启动这个脚本即可启动游戏。如果要关闭服务器，关闭这个脚本和服务端即可。
-重启后所有在服务器玩的玩家会断开连接，重启时间很短，断开后玩家重新连接服务器即可。
+After using the script, there is no need to manually start the game server; you only need to start this script to start the game. If you want to shut down the server, simply close this script and the server.
+
+After a restart, all players on the server will be disconnected, but the restart time is very short. After disconnecting, players can reconnect to the server.
