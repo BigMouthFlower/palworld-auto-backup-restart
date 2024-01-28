@@ -23,6 +23,8 @@ tasklist | findstr /i "PalServer-Win64-Test-Cmd" > NUL
 if %errorlevel% neq 0 (
     echo [%date% %time%] PalServer-Win64-Test-Cmd.exe not running. Starting server...
     start "" "%palworld_path%\PalServer.exe" -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS
+    :: Reset the start time
+    set /a "start_time=%time:~0,2%*3600 + %time:~3,2%*60 + %time:~6,2%"
 )
 timeout /t 5
 goto monitorLoop
