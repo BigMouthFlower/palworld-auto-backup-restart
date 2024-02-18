@@ -65,13 +65,20 @@ exit /b
 :restartServer
 :: Server restart announcements and shutdown logic
 echo [%date% %time%] Announcing server restart...
-call :sendRcon "Broadcast ServerRestartIn5min."
+
+call :sendRcon "Broadcast Server_Restart_In_20_min."
+timeout /t 600
+
+call :sendRcon "Broadcast Server_Restart_In_10_min."
+timeout /t 300
+
+call :sendRcon "Broadcast Server_Restart_In_5_min."
 timeout /t 120
 
-call :sendRcon "Broadcast ServerRestartIn3min."
+call :sendRcon "Broadcast Server_Restart_In_3_min."
 timeout /t 120
 
-call :sendRcon "Broadcast ServerRestartIn1min."
+call :sendRcon "Broadcast Server_Restart_In_1_min."
 timeout /t 60
 
 :: Save the game state before shutting down
