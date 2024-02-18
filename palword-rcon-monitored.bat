@@ -78,7 +78,7 @@ timeout /t 60
 call :sendRcon "save"
 
 :: Shutdown command
-call :sendRcon "shutdown 0 ServerRestartIn1minLOGOUTNOW."
+call :sendRcon "shutdown 10 Server_Restart_In_10_Seconds"
 
 :: Backup logic just before shutdown
 echo [%date% %time%] Backup server data...
